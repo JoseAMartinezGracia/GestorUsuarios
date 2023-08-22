@@ -69,7 +69,6 @@ public class Login extends javax.swing.JFrame {
         jTPassword = new javax.swing.JTextField();
         jBEnter = new javax.swing.JButton();
         jLForget = new javax.swing.JLabel();
-        jLRegistrar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 500));
@@ -96,27 +95,22 @@ public class Login extends javax.swing.JFrame {
 
         jLForget.setText("He olvidado mi contraseña");
 
-        jLRegistrar.setBackground(new java.awt.Color(0, 0, 0));
-        jLRegistrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLRegistrar.setText("Registrarse");
-        jLRegistrar.setOpaque(true);
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(162, 162, 162)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTUser, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Logo)
-                        .addComponent(jTPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLForget)
-                        .addComponent(jLRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jBEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLForget)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTUser, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Logo)
+                            .addComponent(jTPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jBEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(2, 2, 2))))
                 .addContainerGap(175, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -128,11 +122,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(jTUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(32, 32, 32)
                 .addComponent(jLForget)
-                .addGap(18, 18, 18)
-                .addComponent(jLRegistrar)
-                .addGap(18, 18, 18)
+                .addGap(32, 32, 32)
                 .addComponent(jBEnter)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
@@ -220,7 +212,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Logo;
     private javax.swing.JButton jBEnter;
     private javax.swing.JLabel jLForget;
-    private javax.swing.JLabel jLRegistrar;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTPassword;
     private javax.swing.JTextField jTUser;
