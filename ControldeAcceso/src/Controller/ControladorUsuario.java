@@ -24,8 +24,10 @@ public class ControladorUsuario {
         ResultSet rset = conexion.ejecutarSelect(consulta);
         while (rset.next()){
             String nombre= rset.getString("nombre");
+            String cargo=rset.getString("cargo");
             String contraseña = rset.getString("contraseña");
-            Usuario usuario = new Usuario(nombre, contraseña);
+            
+            Usuario usuario = new Usuario(nombre, cargo, contraseña);
             lista.add(usuario);
         }
         return lista;
