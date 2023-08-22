@@ -60,17 +60,19 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLForget" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Component id="jTUser" min="-2" pref="149" max="-2" attributes="0"/>
                               <Component id="Logo" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTPassword" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jBEnter" min="-2" pref="149" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                           </Group>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jTPassword" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLForget" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="175" max="32767" attributes="0"/>
@@ -84,9 +86,9 @@
                   <Component id="Logo" min="-2" pref="179" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="jTUser" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jTPassword" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="jLForget" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="jBEnter" min="-2" max="-2" attributes="0"/>
@@ -108,11 +110,6 @@
             <Property name="text" type="java.lang.String" value="Usuario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTPassword">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="*********"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="jBEnter">
           <Properties>
             <Property name="text" type="java.lang.String" value="Entrar"/>
@@ -124,6 +121,11 @@
         <Component class="javax.swing.JLabel" name="jLForget">
           <Properties>
             <Property name="text" type="java.lang.String" value="He olvidado mi contrase&#xf1;a"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="jTPassword">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -38,7 +38,7 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setIconImage(getIconImage());
-        conexion = new ConexionMySQL("ControlAcceso", "root", "");
+        conexion = new ConexionMySQL("accesoempleado", "root", "");
         controladorUser = new ControladorUsuario(conexion);
         conexion.conectar();
         users = controladorUser.obtenerUsuario();
@@ -66,9 +66,9 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Logo = new javax.swing.JLabel();
         jTUser = new javax.swing.JTextField();
-        jTPassword = new javax.swing.JTextField();
         jBEnter = new javax.swing.JButton();
         jLForget = new javax.swing.JLabel();
+        jTPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(500, 500));
@@ -84,8 +84,6 @@ public class Login extends javax.swing.JFrame {
 
         jTUser.setText("Usuario");
 
-        jTPassword.setText("*********");
-
         jBEnter.setText("Entrar");
         jBEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +93,8 @@ public class Login extends javax.swing.JFrame {
 
         jLForget.setText("He olvidado mi contraseña");
 
+        jTPassword.setText("jPasswordField1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -102,15 +102,16 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(162, 162, 162)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLForget)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTUser, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Logo)
-                            .addComponent(jTPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Logo))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jBEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(2, 2, 2))))
+                            .addGap(2, 2, 2)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jTPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLForget, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(175, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -120,9 +121,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addComponent(jTUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jTPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(20, 20, 20)
                 .addComponent(jLForget)
                 .addGap(32, 32, 32)
                 .addComponent(jBEnter)
@@ -213,7 +214,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jBEnter;
     private javax.swing.JLabel jLForget;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTPassword;
+    private javax.swing.JPasswordField jTPassword;
     private javax.swing.JTextField jTUser;
     // End of variables declaration//GEN-END:variables
 }
