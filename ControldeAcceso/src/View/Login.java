@@ -32,7 +32,7 @@ public class Login extends javax.swing.JFrame {
     ArrayList<Usuario> users;
     ConexionMySQL conexion;
     ControladorUsuario controladorUser;
-    Menu menu;
+    MenuMedico menu;
 
     public Login() throws SQLException {
         initComponents();
@@ -157,7 +157,7 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(rootPane, "bienvenido");
 
                     try {
-                        menu = new Menu(users.get(i));
+                        menu = new MenuMedico(users.get(i));
                         menu.setVisible(true);
                         this.dispose();
 
