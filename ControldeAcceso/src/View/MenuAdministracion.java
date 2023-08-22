@@ -5,6 +5,21 @@
  */
 package View;
 
+
+import java.awt.Toolkit;
+import java.awt.Image;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import javax.swing.Icon;
+import javax.swing.JOptionPane;
+import Controller.ConexionMySQL;
+import Controller.ControladorUsuario;
+import Model.Usuario;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.*;
+
 /**
  *
  * @author 34633
@@ -14,8 +29,12 @@ public class MenuAdministracion extends javax.swing.JFrame {
     /**
      * Creates new form MenuAdministracion
      */
-    public MenuAdministracion() {
+    public MenuAdministracion(Usuario user) {
         initComponents();
+    }
+
+    private MenuAdministracion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

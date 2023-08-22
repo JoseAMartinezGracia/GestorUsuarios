@@ -39,7 +39,7 @@ public class MenuMedico extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setIconImage(getIconImage());
-        conexion = new ConexionMySQL("ControlAcceso", "root", "");
+        conexion = new ConexionMySQL("accesoempleado", "root", "");
         controladorUser = new ControladorUsuario(conexion);
         conexion.conectar();
         

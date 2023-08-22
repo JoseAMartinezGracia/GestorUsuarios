@@ -33,6 +33,7 @@ public class Login extends javax.swing.JFrame {
     ConexionMySQL conexion;
     ControladorUsuario controladorUser;
     MenuMedico menu;
+    MenuAdministracion menuAdmin;
 
     public Login() throws SQLException {
         initComponents();
@@ -148,7 +149,8 @@ public class Login extends javax.swing.JFrame {
                 if (users.get(i).getNombre().equalsIgnoreCase(jTUser.getText()) && users.get(i).getContraseña().equals(jTPassword.getText())) {
 
                     JOptionPane.showMessageDialog(rootPane, "bienvenido");
-
+                    
+                    if (users.get(i).getCargo().equalsIgnoreCase("medico")){
                     try {
                         menu = new MenuMedico(users.get(i));
                         menu.setVisible(true);
@@ -156,6 +158,13 @@ public class Login extends javax.swing.JFrame {
 
                     } catch (SQLException ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    }else{
+                    
+                        menuAdmin = new MenuAdministracion(users.get(i));
+                        menuAdmin.setVisible(true);
+                        this.dispose();
+                    
                     }
 
                 } else {
